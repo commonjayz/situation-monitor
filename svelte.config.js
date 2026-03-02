@@ -6,8 +6,9 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		// Static adapter for deployment to any static host
-		adapter: adapter(),
+		adapter: adapter({
+			runtime: 'nodejs20.x'  
+		}),
 		
 		paths: {
 			base: process.env.BASE_PATH || ''
